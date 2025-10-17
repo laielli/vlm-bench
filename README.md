@@ -1,6 +1,6 @@
 # vlm-bench
 
-**A thin, self-describing harness to benchmark open-source VLMs** (Qwen-VL, InternVL, etc.) across custom datasets — with pluggable backends (VLMEvalKit today, native/vLLM tomorrow), simple scoring, and reproducible run logs.
+**A thin, orchestration layer to benchmark open-source VLMs** (Qwen-VL, InternVL, etc.) across custom datasets — with pluggable backends (VLMEvalKit today, native/vLLM tomorrow), simple scoring, and reproducible run logs.
 
 ## Why vlm-bench?
 - **Fast start:** use VLMEvalKit under the hood without inheriting its opinions everywhere.
@@ -49,6 +49,3 @@ Artifacts:
 ## Scoring
 Built-ins: `exact`, `numeric_tol`, `regex_extract`.  
 For subjective tasks, swap in `llm_judge_stub.py` with your cached judge.
-
-## License
-MIT (see `LICENSE`).
