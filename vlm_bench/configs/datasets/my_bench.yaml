@@ -1,0 +1,5 @@
+adapter: my_bench
+items_path: ./data/my_bench_dev.jsonl
+scoring:
+  type: exact
+  params: {}

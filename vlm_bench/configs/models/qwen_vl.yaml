@@ -1,0 +1,9 @@
+family: qwen-vl
+engine: vlmeval
+system_prompt: "You are a helpful vision-language assistant."
+vision_args:
+  max_pixels: 1048576
+decode:
+  temperature: 0.0
+  max_new_tokens: 768
+  stop: []

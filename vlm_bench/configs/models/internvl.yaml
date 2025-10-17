@@ -1,0 +1,8 @@
+family: internvl
+engine: vlmeval
+vision_args:
+  short_side: 448
+decode:
+  temperature: 0.0
+  max_new_tokens: 768
+  stop: []

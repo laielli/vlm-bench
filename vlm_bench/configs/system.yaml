@@ -1,0 +1,9 @@
+paths:
+  out_dir: ./vlm_bench/reports
+  cache_dir: ~/.cache/vlm-bench
+
+runner: vlmeval   # or: native
+
+scorer:
+  name: exact     # exact | numeric_tol | regex_extract | llm_judge
+  params: {}

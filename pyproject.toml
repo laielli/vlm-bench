@@ -1,0 +1,27 @@
+[project]
+name = "vlm-bench"
+version = "0.1.0"
+description = "Thin wrapper to benchmark VLMs with pluggable backends"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "pyyaml",
+  "pandas",
+  "pyarrow",
+  "tqdm",
+  # enable these as you go:
+  # "torch",
+  # "transformers",
+  # "accelerate",
+  # "opencv-python",
+  # "decord",
+  # "vllm",
+  # "vlmevalkit @ git+https://github.com/open-compass/VLMEvalKit.git"
+]
+
+[project.scripts]
+vlm-bench = "vlm_bench.cli:main"
+
+[build-system]
+requires = ["setuptools>=67", "wheel"]
+build-backend = "setuptools.build_meta"

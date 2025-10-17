@@ -1,0 +1,4 @@
+run:
+  batch_size: 1
+  seed: 1234
+  report_name: qwen2p5vl_7b_mybench_dev

@@ -1,0 +1,10 @@
+__pycache__/
+.DS_Store
+*.pyc
+.vscode/
+.idea/
+*.parquet
+*.jsonl
+*.benchlock.json
+.cache/
+vlm_bench/reports/

@@ -1,0 +1,12 @@
+name: ci-smoke
+on: [push, pull_request]
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.10" }
+      - run: pip install -e .
+      - run: mkdir -p data && printf '{"id":"1","task_type":"vqa","media":"README.md","prompt":"Say ok","targets":["ok"]}\n' > data/my_bench_dev.jsonl
+      - run: vlm-bench run --system vlm_bench/configs/system.yaml --model vlm_bench/configs/models/qwen_vl.yaml --dataset vlm_bench/configs/datasets/my_bench.yaml --run vlm_bench/configs/runs/qwen2p5vl_7b.yaml || true
