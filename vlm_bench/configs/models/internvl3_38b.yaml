@@ -1,0 +1,16 @@
+family: internvl3
+engine: vlmeval
+hf_repo: OpenGVLab/InternVL3-38B  # TODO: confirm exact repo id when wiring
+revision: main
+quantization: none            # none | int8 | int4 (native backend only)
+vision_args:
+  short_side: 448
+video:
+  max_frames: 32
+  strategy: uniform           # uniform | stride
+  fps: null
+  stride: null
+decode:
+  temperature: 0.0
+  max_new_tokens: 1024
+  stop: []
